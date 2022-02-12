@@ -39,12 +39,19 @@ document.querySelector("#equal-btn").addEventListener("click", (e) => {
 //4. create function add
   //4.1 call showOperands function and perform the add operation and display that value in console.log
 //ERROR: Based on this logic: the inputValue gets updated, when user click on the operand button the second time. 
-  //e.g.: function add(){
+//Expectation: e.g.: function add(){
+//  x = showoperands(); //user enters 2 => x = 2
+//  y = showoperands(); //user enters 1 => y = 1
+//   console.log(x); // 2
+//   console.log(y); //1
+  // console.log(parseInt(x)+parseInt(y)); => 3
+// }
+//Actual: e.g.: function add(){
 //  x = showoperands(); //user enters 2 => x = 2
 //  y = showoperands(); //user enters 1 => y = 1
 //   console.log(x); // 1
 //   console.log(y); //1
-  // console.log(parseInt(x)+parseInt(y)); 
+  // console.log(parseInt(x)+parseInt(y)); => 2
 // }
 
 
