@@ -14,47 +14,58 @@
   <div class="main-container">
 
     <div class="title-container">
-      <h1>CalCulator</h1>
+      <h2>Calculator</h2>
     </div>
 
     <div class="calculator-container">
 
-      <div class="result-container">
-        <label for="result"></label>
-        <input type="text" id="result">
+      <div class="result-reset-container">
+        <div id="result">0</div>
       </div>
 
       <div class="reset-container">
         <button type="opeartor" value="C" id="reset">C</button>
       </div>
 
-      <div class="decimal-container">
-        <button type="decimal" value="." id="decimal">.</button>
-      </div>
-
-      <div class="operand-container">
-        <button type="operand" value="0" id="zero">0</button>
-        <button type="operand" value="1" id="one">1</button>
-        <button type="operand" value="2" id="two">2</button>
-        <button type="operand" value="3" id="three">3</button>
-        <button type="operand" value="4" id="four">4</button>
-        <button type="operand" value="5" id="five">5</button>
-        <button type="operand" value="6" id="six">6</button>
-        <button type="operand" value="7" id="seven">7</button>
-        <button type="operand" value="8" id="eight">8</button>
-        <button type="operand" value="9" id="nine">9</button>
-      </div>
-
       <div class="operator-container">
-        <button type="opeartor" value="+" id="add">+</button>
-        <button type="opeartor" value="-" id="subtract">-</button>
-        <button type="opeartor" value="*" id="multiplication">*</button>
-        <button type="opeartor" value="/" id="divison">/</button>
+        <button class="operator" value="/" id="divide">/</button>
+        <button class="operator" value="*" id="multiply">X</button>
+        <button class="operator" value="-" id="subtract">-</button>
+        <button class="operator" value="+" id="add">+</button>
+      </div>
+
+      <div class="operand-decimal-equal-container">
+        <div class="btn-num-seven-eight-nine">
+          <button class="number" value="7" id="seven">7</button>
+          <button class="number" value="8" id="eight">8</button>
+          <button class="number" value="9" id="nine">9</button>
+        </div>
+        <div class="btn-num-four-five-six">
+          <button class="number" value="4" id="four">4</button>
+          <button class="number" value="5" id="five">5</button>
+          <button class="number" value="6" id="six">6</button>
+        </div>
+        <div class="btn-num-one-two-three">
+          <button class="number" value="1" id="one">1</button>
+          <button class="number" value="2" id="two">2</button>
+          <button class="number" value="3" id="three">3</button>
+        </div>
+        <div class="btn-zero-decimal-equal">
+          <button class="number" value="0" id="zero">0</button>
+          <!-- <button type="decimal" value="." id="decimal">.</button> -->
+          <!-- <button type="submit" value="=" id="equal-btn">=</button> -->
+        </div>
       </div>
 
       <div class="btn-equal-container">
         <button type="submit" value="=" id="equal-btn">=</button>
       </div>
+
+      <!-- 
+       <div class="decimal-container">
+        <button type="decimal" value="." id="decimal">.</button>
+      </div> -->
+
     </div>
   </div>
 
