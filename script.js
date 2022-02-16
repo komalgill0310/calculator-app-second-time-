@@ -12,7 +12,7 @@ operators.forEach((operatorValue) => {
       // let newOperator = e.target.textContent;
       let newOperator = e.target.textContent;
       console.log("newOperator: ", newOperator);
-      result.textContent = newOperator;
+      // result.textContent = newOperator;
       continuos(newOperator);
     }
 
@@ -20,7 +20,7 @@ operators.forEach((operatorValue) => {
       // else{
       operator = e.target.textContent;
       console.log("operator: ", operator);
-      result.textContent = e.target.textContent;
+      // result.textContent = e.target.textContent;
     }
     // if(firstOperand && operator){
 
@@ -61,9 +61,6 @@ function calculate(operator) {
   switch (operator) {
     case "+":
       result.textContent = firstNumber + secondNumber;
-      // if(firstOperand && secondOperand && operator){
-      //   console.log("hello");
-      // }
       console.log(result.textContent);
       break;
     case "-":
@@ -87,17 +84,23 @@ function calculate(operator) {
 
 function continuos(newOperator){
 firstOperand = calculate(operator);
+result.textContent = firstOperand;
+console.log(result.textContent);
 console.log("firstOperand: ", firstOperand);
 secondOperand = "";
 operator = newOperator;
-console.log("Continuous Operator: ", operator);
+// console.log("Continuous Operator: ", operator);
 }
 
 
 // document.querySelector("#reset-btn").addEventListener("click", (e) => {
 //   e.preventDefault();
+  // firstOperand = 0;
+  // // secondOperand = 0;
+  // operator = 0;
 // result.textContent = 0;
-
+// console.log(result.textContent);
+// document.querySelector("#result").reset();
 
 
   // let newResult = {
