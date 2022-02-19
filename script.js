@@ -20,7 +20,7 @@ operators.forEach((operatorValue) => {
       // else{
       operator = e.target.textContent;
       console.log("operator: ", operator);
-      // result.textContent = e.target.textContent;
+      result.textContent = e.target.textContent;
     }
     // if(firstOperand && operator){
 
@@ -41,6 +41,7 @@ numbers.forEach((number) => {
       firstOperand += e.target.textContent;
       console.log("firstOperand: ", firstOperand);
       result.textContent = firstOperand;
+      document.querySelector("#reset-btn").textContent = "CE";
     }
     if (firstOperand && operator) {
       secondOperand += e.target.textContent;
@@ -85,12 +86,39 @@ function calculate(operator) {
 function continuos(newOperator){
 firstOperand = calculate(operator);
 result.textContent = firstOperand;
-console.log(result.textContent);
+// console.log(result.textContent);
 console.log("firstOperand: ", firstOperand);
 secondOperand = "";
 operator = newOperator;
 // console.log("Continuous Operator: ", operator);
 }
+
+document.querySelector("#reset-btn").addEventListener("click", (e) => {
+  result.textContent = 0;
+  document.querySelector("#reset-btn").textContent = "AC";
+  if(firstOperand||operator||secondOperand){
+    firstOperand = "";
+    operator = "";
+    secondOperand = "";
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // document.querySelector("#reset-btn").addEventListener("click", (e) => {

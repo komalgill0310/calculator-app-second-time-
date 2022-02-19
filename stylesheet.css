@@ -26,18 +26,18 @@ h1{
   height: 100%;
   width: 197px;
   margin: 8px;
-  /* margin-right: 3px; */
 }
 
 #result{
   display: flex;
   flex-direction: row-reverse;
-  font-size: 33px;
-  padding: 2px;
+  font-size: 29px;
+  padding: 0.5px 2px;
+  /* height: 31px; */
 }
 
 .reset-container{
-  margin-top: -61.7px;
+  margin-top: -63.7px;
   margin-left: 197px;
   margin-bottom: 2px;
 }
@@ -47,6 +47,7 @@ h1{
   padding: 9px;
  margin-left: -36px;
  border-radius: 7px;
+ cursor: pointer;
 }
 
 .memory-btn-container{
@@ -59,6 +60,7 @@ h1{
   font-size: 17px;
   margin-left: 4px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 #memory-recall{
@@ -77,6 +79,7 @@ h1{
   font-size: 17px;
   margin-bottom: 4px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 #divide{
@@ -88,7 +91,6 @@ h1{
   font-weight: 80px;
   padding-bottom: 0.001px;
   padding-top: 0.001px;
-  /* padding: 3px 16px; */
 }
 
 #multiply{
@@ -99,11 +101,9 @@ h1{
 #add{
   padding-right: 13px;
   text-align: center;
-  /* margin-bottom: 14px; */
 }
 
 .operand-decimal-equal-container{
-  /* border: 1px solid green; */
   padding: 3px;
   margin: 55px;
 margin-bottom: 9px;
@@ -116,6 +116,7 @@ margin-left: -0.001px;
   padding: 3px 17px; 
   border-radius: 7px;
   margin-bottom: 4px;
+  cursor: pointer;;
 }
 
 #zero{
@@ -123,7 +124,6 @@ margin-left: -53px;
 }
 
 .btn-equal-container{
-  /* border: 1px solid blueviolet; */
   margin-top: -44.7px;
   margin-right: -51px;
   margin-bottom: 4px;
@@ -133,6 +133,7 @@ margin-left: -53px;
   font-size: 17px;
   padding: 3px 17px; 
   border-radius: 7px;
+  cursor: pointer;
 }
 
 
@@ -153,262 +154,3 @@ margin-left: -53px;
 
 
 
-/* .btn-num-seven-eight-nine{
-  margin-top: -115px;
-} */
-
-
-
-
-
-
-
-
-
-/* body{ */
-  /* background-color: grey; */
-  /* display: flex;
-  flex-direction: column;
-} */
-
-/* .main-container{
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .title-container{
-  text-align: center;
-  margin-top: 117px;
-}
-
-.calculator-container{
-  border: 1px solid black;
-  display: flex;
-  text-align: center;
-  height: 150%;
-  width: 19%;
-  margin: 27px auto;
-  padding-left: -185px;
-  left: 34px;
-}
-
-.result-reset-container{
-height: 100%;
-margin:  auto;
-align-items: center;
-display: flex;
-} */
-/* 
-#result{
-  display: flex;
-  border: 1px solid black;
-  flex-direction: row-reverse;
-  position: relative;
-  height: 28.7px;
-  font-size: 22.7px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  right: -21px;
-  width: 210px;
-  height: 28.7px;
-   padding: 0px 2.7px 4.3px;
-   top: -71px;
-   left: 103px;
-  font-size: 31.7px;
-} */
-
-/* #reset-btn{
-  margin-right: 0px;
-} */
-
-/* .operator{
-position: relative;
-  right: -19px;
-   bottom: -50px;
-  display: block;
-  background-color: whitesmoke;
-  /*  */
-  /* text-align: center;
-  margin-bottom: 9px;
-  font-weight: lighter;
-  border-radius: 3.5px;
-  font-size: 29px;
-  padding: 0px 13.7px;
-}
-
-#divide{
-  padding: 0px 17px;
-}
-
-#subtract{
-  padding: 0px 17px;
-}  */
-
-/* .operand-decimal-equal-container{ */
-  /* border: 1px solid black; */
-  /* margin-top: 51px; */
-  /* right: 23px; */
-  /* margin-right: 12px;
-  left: -45px; */
-  /* display: flex; */
-/* } */
-
-/* .operand-decimal-equal-container{
-  display: flex;
-}
-
-.btn-num-seven-eight-nine{
-  margin-top: 23px;
-  margin-right: 44px;
-  display: inline-block;
-  left: -145px;
-} */
-
-
-
-
-
-
-
-
-/* .number{
-  margin-top: 23px;
-  margin-left: 
-} */
-
-
-
-
-
-/* 
- .number{ 
-  display: flex;
-  display: block;
-   border: 1px solid black;
- position: relative;
- margin-left: 7px;
-  padding: 3px 11px; 
-   margin-bottom: 3px;
-  background-color: white;
-  font-weight: lighter;
-  border-radius: 3.5px;
-  bottom: -35.7px;
-  left: -217px; */
-  /* display: inline-flex; */
-/* }    */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .calculator-container {
-  border: 1px solid white;
-  /* text-align: center; */
-  /* border-radius: 13px;
-  margin: 116px;
-  position: center;
-  height: 217px;
-  width: 21.9%; */ 
-  /* position: absolute; */
-  /* display: flex; */
-/* } */
-
-/* #result{
-  display: flex;
-  border: 1px solid black;
-  border-radius: 5px; */
-  /* position: absolute; */
-  /* display: block; */
-  /* margin: 0 25px; */
-  /* margin-left: 69px;
-  margin-top: -17px;
-  margin-bottom: 13px; */
-  /* margin-top: 5px; */
-  /* width:135px;
-  height: 23px;
-  /* position: relative; */
-  /* left: -29px; */
-  /* top: -498px; */
-  /* background-color: white;
-  padding-left: 55px; */
-  /* justify-content: center; */
-/* } */
-
-/* #result{
-  top: -34px;
-} */
-
-/* #reset-btn{
-  border: 1px solid black;
-  position: relative;
-  right: -73px; */
-    /* top: -0px; */
-    /* bottom: -6.9px;
-  background-color: white;
-  border-radius: 5px;
-  border-collapse: collapse; */
-  /* margin: 0px; */
-  /* margin-bottom: 1.3px;
-  margin-left: 0px;
-} */
-
-
-
-
-
-/* #multiply{
-  font-size: 11.7px;
-} */
-
-/* .btn-num-seven-eight-nine{
-  display: inline-flex;
-  /* margin-right: 14px; */
-/* } */
-
-/* .btn-num-four-five-six{
-  display: inline-flex;
-} */
-
-/* .btn-num-one-two-three{
-  display: inline-flex;
-} */
-
-/* #equal-btn{
-  /* left: -345px; */
-  /* bottom: -23px; */
-  /* margin-right: 480px; */
-/* } */
