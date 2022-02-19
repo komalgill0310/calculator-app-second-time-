@@ -18,13 +18,15 @@ h1{
   border: 2px solid black;
   height: auto;
   width: auto;
+  padding: 5px;
 }
 
 .result-container{
   border: 1px solid red;
   height: 100%;
-  width: 297px;
+  width: 197px;
   margin: 8px;
+  /* margin-right: 3px; */
 }
 
 #result{
@@ -35,9 +37,9 @@ h1{
 }
 
 .reset-container{
-  margin-top: -59px;
+  margin-top: -61.7px;
   margin-left: 197px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 #reset-btn{
@@ -49,7 +51,7 @@ h1{
 
 .memory-btn-container{
   margin-right: 89px;
-  margin-bottom: 17px; 
+  margin-bottom: 23px; 
 }
 
 .memory{
@@ -65,7 +67,7 @@ h1{
 
 .operator-btn-container{
   margin-top: 9px;
-  margin-left:218.9px;
+  margin-left:164.9px;
   margin-bottom: 17px;
 }
 
@@ -84,17 +86,72 @@ h1{
 #subtract{
   font-size: 19px;
   font-weight: 80px;
+  padding-bottom: 0.001px;
+  padding-top: 0.001px;
+  /* padding: 3px 16px; */
 }
 
 #multiply{
-  padding-right: 10px;
+  padding-right: 11px;
   text-align: center;
 }
 
-#multiply{
-  padding-right: 10px;
+#add{
+  padding-right: 13px;
   text-align: center;
+  /* margin-bottom: 14px; */
 }
+
+.operand-decimal-equal-container{
+  /* border: 1px solid green; */
+  padding: 3px;
+  margin: 55px;
+margin-bottom: 9px;
+margin-top: -153px;
+margin-left: -0.001px;
+}
+
+.number{
+  font-size: 17px;
+  padding: 3px 17px; 
+  border-radius: 7px;
+  margin-bottom: 4px;
+}
+
+#zero{
+margin-left: -53px;
+}
+
+.btn-equal-container{
+  /* border: 1px solid blueviolet; */
+  margin-top: -44.7px;
+  margin-right: -51px;
+  margin-bottom: 4px;
+}
+
+#equal-btn{
+  font-size: 17px;
+  padding: 3px 17px; 
+  border-radius: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .btn-num-seven-eight-nine{
   margin-top: -115px;
