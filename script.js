@@ -1,35 +1,22 @@
 let firstOperand = "";
 let secondOperand = "";
 let operator = "";
-// let operator1 = "";
 const result = document.querySelector("#result");
 
 const operators = document.querySelectorAll(".operator");
 operators.forEach((operatorValue) => {
   operatorValue.addEventListener("click", (e) => {
     e.preventDefault();
-    if(firstOperand && secondOperand){
-      // let newOperator = e.target.textContent;
+    if (firstOperand && secondOperand) {
       let newOperator = e.target.textContent;
-      console.log("newOperator: ", newOperator);
-      // result.textContent = newOperator;
+      // console.log("newOperator: ", newOperator);
       continuos(newOperator);
     }
-
     if (firstOperand) {
-      // else{
       operator = e.target.textContent;
-      console.log("operator: ", operator);
+      // console.log("operator: ", operator);
       result.textContent = e.target.textContent;
     }
-    // if(firstOperand && operator){
-
-    // }
-    // if(firstOperand && secondOperand){
-    //   let newOperator = e.target.textContent;
-    //   console.log("newOperator: ", newOperator);
-    //   // continuos(e);
-    // }
   });
 });
 
@@ -39,13 +26,13 @@ numbers.forEach((number) => {
     e.preventDefault();
     if (!operator) {
       firstOperand += e.target.textContent;
-      console.log("firstOperand: ", firstOperand);
+      // console.log("firstOperand: ", firstOperand);
       result.textContent = firstOperand;
       document.querySelector("#reset-btn").textContent = "CE";
     }
     if (firstOperand && operator) {
       secondOperand += e.target.textContent;
-      console.log("secondOperand: ", secondOperand);
+      // console.log("secondOperand: ", secondOperand);
       result.textContent = secondOperand;
     }
   });
@@ -62,44 +49,85 @@ function calculate(operator) {
   switch (operator) {
     case "+":
       result.textContent = firstNumber + secondNumber;
-      console.log(result.textContent);
+      // console.log(result.textContent);
       break;
     case "-":
       result.textContent = firstNumber - secondNumber;
-      console.log(result.textContent);
+      // console.log(result.textContent);
       break;
     case "X":
       result.textContent = firstNumber * secondNumber;
-      console.log(result.textContent);
+      // console.log(result.textContent);
       break;
     case "/":
-      result.textContent = firstNumber / secondNumber;
-      console.log(result.textContent);
+      result.textContent = (firstNumber / secondNumber).toFixed(3);
+      // console.log(result.textContent);
       break;
   }
-  // firstOperand = "";
-  // secondOperand = "";
-  // operator = "";
   return result.textContent;
 }
 
-function continuos(newOperator){
-firstOperand = calculate(operator);
-result.textContent = firstOperand;
-// console.log(result.textContent);
-console.log("firstOperand: ", firstOperand);
-secondOperand = "";
-operator = newOperator;
-// console.log("Continuous Operator: ", operator);
+function continuos(newOperator) {
+  firstOperand = calculate(operator);
+  result.textContent = firstOperand;
+  // console.log("firstOperand: ", firstOperand);
+  secondOperand = "";
+  operator = newOperator;
 }
 
 document.querySelector("#reset-btn").addEventListener("click", (e) => {
+  e.preventDefault();
   result.textContent = 0;
   document.querySelector("#reset-btn").textContent = "AC";
-  if(firstOperand||operator||secondOperand){
+  if (firstOperand || operator || secondOperand) {
     firstOperand = "";
     operator = "";
     secondOperand = "";
+  }
+});
+
+let addMemory = "";
+let subMemory = "";
+// const memoryButtons = document.querySelectorAll(".memory");
+// memoryButtons.forEach((memoryButton) => {
+//   memoryButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+    // if(document.querySelector("#memory-save")){
+    //   saveToMemory();
+    // }
+    // if(document.querySelector("#memory-clear")){
+    //   subToMemory();
+    // }
+  
+//   });
+// });
+
+document.querySelector("#memory-save").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (addMemory) {
+    let addMemory1 = result.textContent;
+    console.log("Memory_Store1: ", addMemory1);
+    addMemory = parseInt(addMemory) + parseInt(addMemory1);
+    console.log("Sum of M+: ", addMemory);
+  }
+  else {
+    addMemory = result.textContent;
+    console.log("FirstMemoryStore: ", addMemory);
+  }
+})
+
+
+document.querySelector("#memory-clear").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (subMemory) {
+    let subMemory1 = result.textContent;
+    console.log("Memory_Store1: ", subMemory1);
+    subMemory = parseInt(subMemory) + parseInt(subMemory1);
+    console.log("Sum of M+: ", subMemory);
+  }
+  else {
+    subMemory = result.textContent;
+    console.log("FirstMemoryStore: ", subMemory);
   }
 });
 
@@ -108,6 +136,36 @@ document.querySelector("#reset-btn").addEventListener("click", (e) => {
 
 
 
+// function saveToMemory() {
+//   if (document.querySelector("#memory-save")) {
+//     if (addMemory) {
+//       let addMemory1 = result.textContent;
+//       console.log("Memory_Store1: ", addMemory1);
+//       addMemory = parseInt(addMemory) + parseInt(addMemory1);
+//       console.log("Sum of M+: ", addMemory);
+//     }
+//     else {
+//       addMemory = result.textContent;
+//       console.log("FirstMemoryStore: ", addMemory);
+//     }
+//   }
+// }
+
+
+// function subToMemory(){
+//   if (document.querySelector("#memory-clear")) {
+//     if (subMemory) {
+//       let subMemory1 = result.textContent;
+//       console.log("Memory_Store1: ", subMemory1);
+//       subMemory = parseInt(subMemory) + parseInt(subMemory1);
+//       console.log("Sum of M+: ", subMemory);
+//     }
+//     else {
+//       subMemory = result.textContent;
+//       console.log("FirstMemoryStore: ", subMemory);
+//     }
+//   }
+// }
 
 
 
@@ -121,23 +179,54 @@ document.querySelector("#reset-btn").addEventListener("click", (e) => {
 
 
 
-// document.querySelector("#reset-btn").addEventListener("click", (e) => {
+
+
+
+
+
+
+
+
+
+
+
+
+// document.querySelector("#memory-save").addEventListener("click", (e) => {
 //   e.preventDefault();
-  // firstOperand = 0;
-  // // secondOperand = 0;
-  // operator = 0;
-// result.textContent = 0;
-// console.log(result.textContent);
-// document.querySelector("#result").reset();
-
-
-  // let newResult = {
-  //   firstOperand: 0,
-  //   secondOperand: 0,
-  //   operator: 0
-  // };
-  // return newResult;
-  // firstOperand = "";
-  // secondOperand = "";
-  // operator = "";
+//   // let value = 0;
+//   if(result.textContent){
+//     value = {
+//       id: Date.now(),
+//       saveValue: result.textContent
+//     };
+//     let memoryValue = JSON.parse(localStorage.getItem("value")) || [];
+//     // value = parseInt(result.textContent) + parseInt(value);
+//     memoryValue.push(value);
+//     localStorage.setItem("value", JSON.stringify(value));
+//   }
 // });
+
+// document.querySelector("#memory-clear").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   localStorage.removeItem("value");
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
