@@ -23,8 +23,8 @@ h1{
 
 .result-container{
   border: 1px solid red;
-  height: 100%;
-  width: 197px;
+  height: 36px;
+  width: 277px;
   margin: 8px;
 }
 
@@ -38,7 +38,7 @@ h1{
 
 .reset-container{
   margin-top: -63.7px;
-  margin-left: 197px;
+  margin-left: 217px;
   margin-bottom: 2px;
 }
 
@@ -64,12 +64,12 @@ h1{
 }
 
 #memory-recall{
-  margin-right: -31px;
+  margin-right: 0.02px;
 }
 
 .operator-btn-container{
   margin-top: 9px;
-  margin-left:164.9px;
+  margin-left:214.9px;
   margin-bottom: 17px;
 }
 
