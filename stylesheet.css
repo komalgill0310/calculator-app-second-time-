@@ -11,7 +11,7 @@
 }
 
 h1{
-  font-size: 56px;
+  font-size: 57px;
 }
 
 .calculator-container{
@@ -19,13 +19,17 @@ h1{
   height: auto;
   width: auto;
   padding: 5px;
+  border-radius: 13px;
+  background-color: black;
 }
 
 .result-container{
-  border: 1px solid red;
+  border: 1px solid black;
   height: 36px;
-  width: 277px;
-  margin: 8px;
+  width: 383px;
+  margin: 8px;  
+  border-radius: 7px;
+  /* background-color: white; */
 }
 
 #result{
@@ -33,117 +37,149 @@ h1{
   flex-direction: row-reverse;
   font-size: 29px;
   padding: 0.5px 2px;
-  /* height: 31px; */
+  color: white;
 }
 
+
+
 .reset-container{
-  margin-top: -63.7px;
-  margin-left: 217px;
+  margin-top: -75.7px;
+  margin-left: 369px;
   margin-bottom: 2px;
 }
 
 #reset-btn{
-  font-size: 17px;
-  padding: 9px;
+  font-size: 23px;
+  padding: 131px 9px;
  margin-left: -36px;
  border-radius: 7px;
+ background-color: red;
  cursor: pointer;
 }
 
+#reset-btn:hover{
+
+ color: white;
+}
+
+
 .memory-btn-container{
-  margin-right: 89px;
+  margin-right: 61px;
   margin-bottom: 23px; 
 }
 
 .memory{
-  padding: 9px;
-  font-size: 17px;
+  padding: 11px 17px;
+  font-size: 23px;
   margin-left: 4px;
   border-radius: 7px;
   cursor: pointer;
 }
 
+.memory:hover{
+  background-color: #cccccc;
+}
+
+#memory-save{
+  padding: 11px 19px;
+}
+#memory-clear{
+  padding: 11px 21px;
+}
+
 #memory-recall{
-  margin-right: 0.02px;
+  margin-right: 0.4px;
 }
 
 .operator-btn-container{
-  margin-top: 9px;
-  margin-left:214.9px;
+  margin-top: -235px;
+  margin-left:264.9px;
   margin-bottom: 17px;
+  /* border: 1px solid magenta; */
 }
 
 .operator{
   display: block;
-  padding: 3px 17px; 
-  font-size: 17px;
-  margin-bottom: 4px;
+  padding: 11px 26px; 
+  font-size: 23px;
+  margin-left: -4px;
+  margin-bottom: 7px;
   border-radius: 7px;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
-#divide{
-  font-size: 18px;  
+.operator:hover{
+  background-color: #ff9500;
 }
+/* #divide{
+  margin-top: -23px;
+  font-size: 18px;  
+} */
 
 #subtract{
-  font-size: 19px;
-  font-weight: 80px;
-  padding-bottom: 0.001px;
-  padding-top: 0.001px;
+  font-size: 25px;
+padding: 11px 27.7px;
 }
 
-#multiply{
-  padding-right: 11px;
-  text-align: center;
-}
 
 #add{
-  padding-right: 13px;
-  text-align: center;
+  /* margin-top: 13px; */
+  margin-top: -0.4px;
+font-size: 25px;
 }
 
 .operand-decimal-equal-container{
+  /* border: 1px solid green; */
   padding: 3px;
-  margin: 55px;
+  /* margin: 55px; */
 margin-bottom: 9px;
-margin-top: -153px;
-margin-left: -0.001px;
+margin-top: -253px;
+margin-left: -14px;
+margin-right: 131px;
+}
+
+#eight{
+margin-left: 5.1px;
+margin-right: -0.8px;
 }
 
 .number{
-  font-size: 17px;
-  padding: 3px 17px; 
+  font-size: 25px;
+  padding: 11px 26.7px; 
   border-radius: 7px;
   margin-bottom: 4px;
-  cursor: pointer;;
+  margin-left: 7.9px;
+  cursor: pointer;
 }
 
+.number:hover{
+  background-color: #8c8c8c;
+}
 #zero{
-margin-left: -53px;
+margin-left: -73px;
+}
+
+#decimal{
+  padding: 11px 31px;
 }
 
 .btn-equal-container{
-  margin-top: -44.7px;
-  margin-right: -51px;
-  margin-bottom: 4px;
+  margin-top: -70.7px;
+  margin-right: -29px;
+  margin-bottom: 13px;
 }
 
 #equal-btn{
-  font-size: 17px;
-  padding: 3px 17px; 
+  font-size: 25px;
+  padding: 11px 27px; 
   border-radius: 7px;
   cursor: pointer;
 }
 
-/* #memory-output{
-  border: 3px solid sandybrown;
-  height: 240px;
-  width: 259px;
-  margin-top: 5px;
-  margin-left: 516px;
-  margin-top: -246px;
-} */
+#equal-btn:hover{
+  background-color: #065fd4;
+}
+
 
 
 

@@ -16,7 +16,6 @@ operators.forEach((operatorValue) => {
     }
     if (firstOperand) {
       operator = e.target.textContent;
-      // result.textContent = e.target.textContent;
     }
   });
 });
@@ -27,13 +26,11 @@ numbers.forEach((number) => {
     e.preventDefault();
     if (!operator) {
       firstOperand += e.target.textContent;
-      console.log("firstOperand: ", firstOperand);
       result.textContent = firstOperand;
       document.querySelector("#reset-btn").textContent = "CE";
     }
     if (firstOperand && operator) {
       secondOperand += e.target.textContent;
-      console.log("secondOperand: ", secondOperand);
       result.textContent = secondOperand;
     }
   });
@@ -62,7 +59,7 @@ function calculate(operator) {
     case "X":
       result.textContent = firstNumber * secondNumber;
       break;
-    case "/":
+    default:
       result.textContent = (firstNumber % secondNumber) === 0 ? (firstNumber / secondNumber) : (firstNumber / secondNumber).toFixed(3);
       break;
   }
@@ -91,13 +88,11 @@ document.querySelector("#memory-save").addEventListener("click", (e) => {
   e.preventDefault();
   if (addMemory) {
     let addMemory1 = result.textContent;
-    console.log("Memory_Store1: ", addMemory1);
     addMemory = parseInt(addMemory) + parseInt(addMemory1);
     console.log("Sum of M+: ", addMemory);
   }
   else {
     addMemory = result.textContent;
-    console.log("FirstMemoryStore: ", addMemory);
   }
 });
 
@@ -105,13 +100,10 @@ document.querySelector("#memory-clear").addEventListener("click", (e) => {
   e.preventDefault();
   if (subMemory) {
     let subMemory1 = result.textContent;
-    console.log("Memory_Store1: ", subMemory1);
     subMemory = parseInt(subMemory) + parseInt(subMemory1);
-    console.log("Sum of M+: ", subMemory);
   }
   else {
     subMemory = result.textContent;
-    console.log("FirstMemoryStore: ", subMemory);
   }
 });
 
@@ -119,16 +111,13 @@ document.querySelector("#memory-recall").addEventListener("click", (e) => {
   e.preventDefault();
   outputMemory = addMemory - subMemory;
   result.textContent = outputMemory;
-  console.log("MR: ", result.textContent);
   if (firstOperand && operator) {
     secondOperand = outputMemory;
     result.textContent = secondOperand;
-    console.log("MR SecondOperand: ", result.textContent);
   }
   if (!firstOperand) {
     firstOperand = outputMemory;
     result.textContent = firstOperand;
-    console.log("MR FirstOperand: ", result.textContent);
   }
 });
 
