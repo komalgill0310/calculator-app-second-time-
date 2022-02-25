@@ -1,24 +1,10 @@
 let firstOperand = "";
 let secondOperand = "";
 let operator = "";
-let addMemory = "";
-let subMemory = "";
-let outputMemory = "";
+let addToMemory = "";
+let subToMemory = "";
+let memoryRecall = "";
 const result = document.querySelector("#result");
-
-const operators = document.querySelectorAll(".operator");
-operators.forEach((operatorValue) => {
-  operatorValue.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (firstOperand && secondOperand) {
-      let newOperator = e.target.textContent;
-      continuos(newOperator);
-    }
-    if (firstOperand) {
-      operator = e.target.textContent;
-    }
-  });
-});
 
 const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
@@ -32,6 +18,20 @@ numbers.forEach((number) => {
     if (firstOperand && operator) {
       secondOperand += e.target.textContent;
       result.textContent = secondOperand;
+    }
+  });
+});
+
+const operators = document.querySelectorAll(".operator");
+operators.forEach((operatorValue) => {
+  operatorValue.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (firstOperand && secondOperand) {
+      let newOperator = e.target.textContent;
+      continuousOperation(newOperator);
+    }
+    if (firstOperand) {
+      operator = e.target.textContent;
     }
   });
 });
@@ -56,7 +56,7 @@ function calculate(operator) {
     case "-":
       result.textContent = firstNumber - secondNumber;
       break;
-    case "X":
+    case "x":
       result.textContent = firstNumber * secondNumber;
       break;
     default:
@@ -66,7 +66,7 @@ function calculate(operator) {
   return result.textContent;
 }
 
-function continuos(newOperator) {
+function continuousOperation(newOperator) {
   firstOperand = calculate(operator);
   result.textContent = firstOperand;
   secondOperand = "";
@@ -84,50 +84,48 @@ document.querySelector("#reset-btn").addEventListener("click", (e) => {
   }
 });
 
-document.querySelector("#memory-save").addEventListener("click", (e) => {
+document.querySelector("#memory-plus").addEventListener("click", (e) => {
   e.preventDefault();
-  if (addMemory) {
-    let addMemory1 = result.textContent;
-    addMemory = parseInt(addMemory) + parseInt(addMemory1);
-    console.log("Sum of M+: ", addMemory);
+  if (addToMemory) {
+    let addToMemory1 = result.textContent;
+    addToMemory = parseInt(addToMemory) + parseInt(addToMemory1);
   }
   else {
-    addMemory = result.textContent;
+    addToMemory = result.textContent;
   }
 });
 
-document.querySelector("#memory-clear").addEventListener("click", (e) => {
+document.querySelector("#memory-minus").addEventListener("click", (e) => {
   e.preventDefault();
-  if (subMemory) {
-    let subMemory1 = result.textContent;
-    subMemory = parseInt(subMemory) + parseInt(subMemory1);
+  if (subToMemory) {
+    let subToMemory1 = result.textContent;
+    subToMemory = parseInt(subToMemory) + parseInt(subToMemory1);
   }
   else {
-    subMemory = result.textContent;
+    subToMemory = result.textContent;
   }
 });
 
 document.querySelector("#memory-recall").addEventListener("click", (e) => {
   e.preventDefault();
-  outputMemory = addMemory - subMemory;
-  result.textContent = outputMemory;
+  memoryRecall = addToMemory - subToMemory;
+  result.textContent = memoryRecall;
   if (firstOperand && operator) {
-    secondOperand = outputMemory;
+    secondOperand = memoryRecall;
     result.textContent = secondOperand;
   }
   if (!firstOperand) {
-    firstOperand = outputMemory;
+    firstOperand = memoryRecall;
     result.textContent = firstOperand;
   }
 });
 
-document.querySelector("#memory-refresh").addEventListener("click", (e) => {
+document.querySelector("#memory-clear").addEventListener("click", (e) => {
   e.preventDefault();
-  outputMemory = "";
-  console.log("MC: ", outputMemory);
-  if (addMemory || subMemory) {
-    addMemory = "";
-    subMemory = "";
+  memoryRecall = "";
+  if (addToMemory || subToMemory) {
+    addToMemory = "";
+    subToMemory = "";
   }
 });
 

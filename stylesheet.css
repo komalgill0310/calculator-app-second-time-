@@ -16,74 +16,67 @@ h1{
 
 .calculator-container{
   border: 2px solid black;
-  height: auto;
-  width: auto;
-  padding: 5px;
   border-radius: 13px;
   background-color: black;
+  height: auto;
+  width: auto;
+  padding: 5px;    
 }
 
 .result-container{
   border: 1px solid black;
   height: 36px;
   width: 383px;
-  margin: 8px;  
-  border-radius: 7px;
-  /* background-color: white; */
+  margin: 8px;   
 }
 
 #result{
   display: flex;
   flex-direction: row-reverse;
-  font-size: 29px;
-  padding: 0.5px 2px;
   color: white;
+  font-size: 29px;
+  padding: 0.5px 2px;  
 }
 
-
-
 .reset-container{
-  margin-top: -75.7px;
-  margin-left: 369px;
-  margin-bottom: 2px;
+  margin: -75.7px 0px 2px 369px; 
 }
 
 #reset-btn{
+  border-radius: 7px;
+  background-color: red;
+  cursor: pointer;
   font-size: 23px;
   padding: 131px 9px;
- margin-left: -36px;
- border-radius: 7px;
- background-color: red;
- cursor: pointer;
+  margin-left: -36px;  
 }
 
 #reset-btn:hover{
-
+ background-color: green;
  color: white;
 }
 
-
 .memory-btn-container{
-  margin-right: 61px;
-  margin-bottom: 23px; 
+  margin: 0px 61px 23px 0px;
 }
 
 .memory{
-  padding: 11px 17px;
-  font-size: 23px;
-  margin-left: 4px;
   border-radius: 7px;
   cursor: pointer;
+  font-size: 23px;
+  padding: 11px 17px;  
+  margin-left: 4px;  
 }
 
 .memory:hover{
   background-color: #cccccc;
 }
 
-#memory-save{
+#memory-plus{
   padding: 11px 19px;
 }
-#memory-clear{
+
+#memory-minus{
   padding: 11px 21px;
 }
 
@@ -92,69 +85,49 @@ h1{
 }
 
 .operator-btn-container{
-  margin-top: -235px;
-  margin-left:264.9px;
-  margin-bottom: 17px;
-  /* border: 1px solid magenta; */
+  margin: -235px 0px 17px 264.9px;
 }
 
 .operator{
   display: block;
-  padding: 11px 26px; 
-  font-size: 23px;
-  margin-left: -4px;
-  margin-bottom: 7px;
   border-radius: 7px;
-  cursor: pointer; 
+  cursor: pointer;   
+  font-size: 23px;
+  padding: 11px 26px; 
+  margin: 0px 0px 7px -4px; 
 }
 
 .operator:hover{
   background-color: #ff9500;
 }
-/* #divide{
-  margin-top: -23px;
-  font-size: 18px;  
-} */
 
 #subtract{
   font-size: 25px;
-padding: 11px 27.7px;
+  padding: 11px 27.7px;
 }
 
-
 #add{
-  /* margin-top: 13px; */
   margin-top: -0.4px;
-font-size: 25px;
+  font-size: 25px;
 }
 
 .operand-decimal-equal-container{
-  /* border: 1px solid green; */
   padding: 3px;
-  /* margin: 55px; */
-margin-bottom: 9px;
-margin-top: -253px;
-margin-left: -14px;
-margin-right: 131px;
-}
-
-#eight{
-margin-left: 5.1px;
-margin-right: -0.8px;
+  margin: -253px 131px 9px -14px;
 }
 
 .number{
+  border-radius: 7px;
+  cursor: pointer;
   font-size: 25px;
   padding: 11px 26.7px; 
-  border-radius: 7px;
-  margin-bottom: 4px;
-  margin-left: 7.9px;
-  cursor: pointer;
+  margin: 0px 0px 4px 7.9px;    
 }
 
 .number:hover{
   background-color: #8c8c8c;
 }
+
 #zero{
 margin-left: -73px;
 }
@@ -164,9 +137,7 @@ margin-left: -73px;
 }
 
 .btn-equal-container{
-  margin-top: -70.7px;
-  margin-right: -29px;
-  margin-bottom: 13px;
+  margin: -70.7px -29px 13px 0px;
 }
 
 #equal-btn{
