@@ -6,6 +6,36 @@ let subToMemory = "";
 let memoryRecall = "";
 const result = document.querySelector("#result");
 
+document.querySelector("#equal-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  calculate(operator);
+  if (firstOperand && secondOperand && operator) {
+    firstOperand = "";
+    secondOperand = "";
+    operator = "";
+  }
+});
+
+function calculate(operator) {
+  let firstNumber = parseFloat(firstOperand);
+  let secondNumber = parseFloat(secondOperand);
+  switch (operator) {
+    case "+":
+      result.textContent = firstNumber + secondNumber;
+      break;
+    case "-":
+      result.textContent = firstNumber - secondNumber;
+      break;
+    case "x":
+      result.textContent = firstNumber * secondNumber;
+      break;
+    default:
+      result.textContent = (firstNumber % secondNumber) === 0 ? (firstNumber / secondNumber) : (firstNumber / secondNumber).toFixed(3);
+      break;
+  }
+  return result.textContent;
+}
+
 const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
@@ -36,35 +66,6 @@ operators.forEach((operatorValue) => {
   });
 });
 
-document.querySelector("#equal-btn").addEventListener("click", (e) => {
-  e.preventDefault();
-  calculate(operator);
-  if (firstOperand && secondOperand && operator) {
-    firstOperand = "";
-    secondOperand = "";
-    operator = "";
-  }
-});
-
-function calculate(operator) {
-  let firstNumber = parseFloat(firstOperand);
-  let secondNumber = parseFloat(secondOperand);
-  switch (operator) {
-    case "+":
-      result.textContent = firstNumber + secondNumber;
-      break;
-    case "-":
-      result.textContent = firstNumber - secondNumber;
-      break;
-    case "x":
-      result.textContent = firstNumber * secondNumber;
-      break;
-    default:
-      result.textContent = (firstNumber % secondNumber) === 0 ? (firstNumber / secondNumber) : (firstNumber / secondNumber).toFixed(3);
-      break;
-  }
-  return result.textContent;
-}
 
 function continuousOperation(newOperator) {
   firstOperand = calculate(operator);
