@@ -19,4 +19,4 @@ Until now, this has been the most challenging application. My initial thoughts w
   * Arguments, Parameters
 
 # Author
-<font size=5>Komal - | Jr. Software Developer | [Simple Calculator](https://komalgill0310.github.io/calculator-app-second-time-/) | [LinkedIn](https://www.linkedin.com/in/komalpreet-kaur-3b6924177/)
+<font size=5>Komal - | Jr. Software Developer | Personal Website is in Progress | [LinkedIn](https://www.linkedin.com/in/komalpreet-kaur-3b6924177/)
