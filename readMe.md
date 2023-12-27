@@ -19,4 +19,5 @@ Until now, this has been the most challenging application. My initial thoughts w
   * Arguments, Parameters
 
 # Author
-<font size=5>Komal - | Jr. Software Developer | Personal Website is in Progress | [LinkedIn](https://www.linkedin.com/in/komalpreet-kaur-3b6924177/)
+
+Komal | Software Developer | [Portfolio](https://kaurkomal.com/) | [LinkedIn](https://www.linkedin.com/in/hssa03/)
